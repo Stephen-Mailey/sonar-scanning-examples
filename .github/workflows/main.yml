@@ -28,6 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Step 4 - Build Maven project
+        run: mvn -B package --file sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/pom.xml
         
       - name: Step 5 - Code check using SonarQube(Peter)
         run: mvn clean verify sonar:sonar -Dsonar.login=myAuthenticationToken --file sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/pom.xml
