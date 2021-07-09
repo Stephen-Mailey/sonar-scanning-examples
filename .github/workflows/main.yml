@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
         
       - name: Step 5 - Code check using SonarQube(Peter)
-        run: mvn clean verify sonar:sonar -Dsonar.login=myAuthenticationToken file sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/pom.xml
+        run: mvn clean verify sonar:sonar -Dsonar.login=myAuthenticationToken -f sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/pom.xml
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
